@@ -373,6 +373,13 @@ template {
   color: #fff;
   text-transform: uppercase;
   margin-right: 40px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.nav__item:hover {
+  color: #E3B873;
+  cursor: pointer;
 }
 
 .phone {
@@ -394,6 +401,9 @@ template {
   text-transform: uppercase;
   padding: 12px 20px;
   border-radius: 2px;
+}
+
+.button:hover {
   cursor: pointer;
 }
 
@@ -429,11 +439,22 @@ template {
   display: flex;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .hero__button {
   margin-right: 20px;
 }
 
 .hero__content {
+  position: relative;
   max-width: 670px;
 }
 
@@ -472,6 +493,15 @@ template {
   text-decoration: none;
 }
 
+.hero__scroll-down::after {
+  content: '';
+  border: 1.5px solid #E3B873;
+  border-radius: 100px;
+  background: url("../img/vector.svg") center center no-repeat;
+  padding: 15px 15px;
+  margin-left: 12px;
+}
+
 .instagram {
   background-color: #131313;
   display: -webkit-box;
@@ -491,6 +521,22 @@ template {
           transform: rotate(-90deg);
   text-transform: uppercase;
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 8px;
+  line-height: 0.8px;
+}
+
+.instagram__link::before {
+  content: '';
+  width: 51px;
+  height: 1px;
+  background-color: #E3B873;
+  margin-right: 8px;
 }
 
 .title {
@@ -509,6 +555,42 @@ template {
   background-color: transparent;
   border: 1px solid #ffffff;
   color: #ffffff;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura Book',sans-serif;
+  font-size: 14px;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', sans-serif;
+}
+
+.section-title__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-title__img::before, .section-title__img::after {
+  content: '';
+  width: 32px;
+  height: 2px;
+  background-color: #E3B873;
+  margin: 0 10px;
 }
 
 *, *:before, *:after {
