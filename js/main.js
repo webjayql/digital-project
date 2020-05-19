@@ -1,10 +1,12 @@
-document.addEventListener("DomContentLoaded", function(event){
-    const modal = document.querySelector('.modal');
-    const modalBtn = document.querySelectorAll('data-toggle=modal');
+$(document).ready(function () {
+    var modal = $('.modal'),
+        modalBtn = $('[data-toggle=modal]'),
+        modalClose = $('.modal__close');
 
-    modalBtn.forEach (element => {
-        element.addEventListener('click', () => {
-            modal.classList.toggle('.modal-visible');
-        });
+    modalBtn.on('click', function () {
+        modal.toggleClass('modal-visible');
+    });
+    modalClose.on('click', function () {
+        modal.removeClass('modal-visible');
     });
 });
